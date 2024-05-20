@@ -1,0 +1,215 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id = "@+id/admin_dashboard">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:fontFamily="@font/archivoblack"
+        android:text="TCF"
+        android:textColor="@color/pink"
+        android:textSize="50dp"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
+        android:text="You are doing great!"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <LinearLayout
+        android:id = "@+id/messagecontianer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/messageTextView">
+
+        <!-- Rectangle 1 -->
+        <TextView
+            android:id="@+id/rectangle1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/rectangle_background1"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:text="Total orders of this month"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+
+        <!-- Space between rectangles -->
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent"/>
+
+        <!-- Rectangle 2 -->
+        <TextView
+            android:id="@+id/rectangle2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="20dp"
+        android:background="@drawable/rectangle_background2"
+        android:gravity="center"
+        android:text="Total Earning of this month"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_weight="1"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ordermessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
+        android:text="Recent Orders"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messagecontianer" />
+
+
+    <Button
+        android:id="@+id/seeAllButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:background="@drawable/see_all"
+        android:padding="5dp"
+        android:text="See All"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintBottom_toBottomOf="@+id/ordermessage"
+        app:layout_constraintStart_toEndOf="@+id/ordermessage"
+        app:layout_constraintTop_toTopOf="@+id/ordermessage"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/recentordercontainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_container1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ordermessage"
+        >
+
+        <TextView
+            android:id="@+id/ordercontainer1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/rectangle_background3"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:text="order1"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/ordercontainer2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/rectangle_background3"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="order2"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/newlyregisterecustomers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
+        android:text="Newly Registered Customers"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recentordercontainer" />
+
+
+    <LinearLayout
+        android:id="@+id/newlyregisterecustomerscontainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/custom_container1"
+        app:layout_constraintTop_toBottomOf="@id/newlyregisterecustomers">
+
+        <TextView
+            android:id="@+id/newcustomercontainer1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangle_background3"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Customer No 1"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/newcustomercontainer2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangle_background3"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Customer No 2"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/newcustomercontainer3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangle_background3"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Customer No 3"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

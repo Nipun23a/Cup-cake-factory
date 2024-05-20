@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="addCakeButton" type="id" />
+    <item name="categorySpinner" type="id" />
+    <item name="cakePriceEditText" type="id" />
+    <item name="cakeQuantityEditText" type="id" />
+    <item name="cakeNameEditText" type="id" />
+</resources>
